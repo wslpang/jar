@@ -1,0 +1,20 @@
+<!--#layout("/common/layout.html",{"jsBase":"/js/hbapp/historyContract/"}){ -->
+<layui:searchForm formId="searchForm"  condition="${search}">
+</layui:searchForm>
+
+<div class="layui-btn-group">
+    <layui:accessButton function="historyContract.add"  action="add">增加</layui:accessButton>
+    <layui:accessButton function="historyContract.edit"  action="edit">编辑</layui:accessButton>
+    <layui:accessButton function="historyContract.del"  action="del">删除</layui:accessButton>
+</div>
+
+<table id="historyContractTable" lay-filter="historyContractTable"></table>
+<!--#} -->
+<script>
+
+layui.use(['index'], function(){
+    var index = layui.index
+    index.init();
+});
+
+</script>

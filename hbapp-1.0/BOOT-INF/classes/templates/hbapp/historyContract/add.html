@@ -1,0 +1,70 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/hbapp/historyContract/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">用户ID</label>
+				<div class="layui-input-inline">
+					<input type="text" name="userId" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">货币兑</label>
+				<div class="layui-input-inline">
+					<input type="text" name="contractCode" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">净值</label>
+				<div class="layui-input-inline">
+					<input type="text" name="amount" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">货币单位</label>
+				<div class="layui-input-inline">
+					<input type="text" name="asset" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">添加时间</label>
+				<div class="layui-input-inline">
+					<input type="text" name="createTime" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">添加整点：8，16，24</label>
+				<div class="layui-input-inline">
+					<input type="text" name="timeIndex" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">收益的真实日期</label>
+				<div class="layui-input-inline">
+					<input type="text" name="timeDate" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var historyContractAdd = layui.add
+    historyContractAdd.init();
+});
+</script>

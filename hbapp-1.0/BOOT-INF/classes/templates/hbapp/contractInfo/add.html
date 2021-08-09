@@ -1,0 +1,86 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/hbapp/contractInfo/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">货币兑</label>
+				<div class="layui-input-inline">
+					<input type="text" name="contractCode" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">对冲比例</label>
+				<div class="layui-input-inline">
+					<input type="text" name="contractSize" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">状态</label>
+				<div class="layui-input-inline">
+					<input type="text" name="contractStatus" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">创建时间</label>
+				<div class="layui-input-inline">
+					<input type="text" name="createDate" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">deliveryTime</label>
+				<div class="layui-input-inline">
+					<input type="text" name="deliveryTime" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">priceTick</label>
+				<div class="layui-input-inline">
+					<input type="text" name="priceTick" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">settlementDate</label>
+				<div class="layui-input-inline">
+					<input type="text" name="settlementDate" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">supportMarginMode</label>
+				<div class="layui-input-inline">
+					<input type="text" name="supportMarginMode" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">币种</label>
+				<div class="layui-input-inline">
+					<input type="text" name="symbol" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var contractInfoAdd = layui.add
+    contractInfoAdd.init();
+});
+</script>

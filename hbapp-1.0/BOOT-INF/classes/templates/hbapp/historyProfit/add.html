@@ -1,0 +1,44 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/hbapp/historyProfit/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">用户ID</label>
+				<div class="layui-input-inline">
+					<input type="text" name="userId" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">当时年化收益率</label>
+				<div class="layui-input-inline">
+					<input type="text" name="profit" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">创建时间</label>
+				<div class="layui-input-inline">
+					<input type="text" name="createTime" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">收益的真实日期yyyy-MM-dd</label>
+				<div class="layui-input-inline">
+					<input type="text" name="timeDate" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var historyProfitAdd = layui.add
+    historyProfitAdd.init();
+});
+</script>

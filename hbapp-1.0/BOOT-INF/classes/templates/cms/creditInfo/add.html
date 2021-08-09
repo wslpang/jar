@@ -1,0 +1,92 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/cms/creditInfo/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">邮箱</label>
+				<div class="layui-input-inline">
+					<input type="text" name="email" class="layui-input" lay-verify="required|email">
+				</div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">抵押币种</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="symbol" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">开仓价（USDT）</label>
+				<div class="layui-input-inline">
+					<input type="text" name="openingPrice" class="layui-input" lay-verify="required">
+				</div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">抵押数量</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="mortgage" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">实际借贷金额（USDT）</label>
+				<div class="layui-input-inline">
+					<input type="text" name="actualLoanAmount" class="layui-input" lay-verify="required">
+				</div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">质押率</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="pledgeRate" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">预警质押率</label>
+				<div class="layui-input-inline">
+					<input type="text" name="warnPledgeRate" class="layui-input" lay-verify="required">
+				</div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">平仓质押率</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="closePledgeRate" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">钉钉群URL</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="dingUrl" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">钉钉验签key</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="dingSecret" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var creditInfoAdd = layui.add
+    creditInfoAdd.init();
+});
+</script>

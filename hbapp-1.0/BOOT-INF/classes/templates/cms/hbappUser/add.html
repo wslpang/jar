@@ -1,0 +1,75 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/cms/hbappUser/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">用户名</label>
+				<div class="layui-input-inline">
+					<input type="text" name="userName" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">密码</label>
+				<div class="layui-input-inline">
+					<input type="text" name="password" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">api_key</label>
+				<div class="layui-input-inline">
+					<input type="text" name="apiKey" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">secret_key</label>
+				<div class="layui-input-inline">
+					<input type="text" name="secretKey" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">姓名备注</label>
+				<div class="layui-input-inline">
+					<input type="text" name="name" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">邮箱</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" class="layui-input" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">会员类型</label>
+                <div class="layui-input-block">
+                    <input name="type" value="1" type="radio" title="火币" checked="">
+                    <input name="type" value="2" type="radio" title="币安">
+                </div>
+            </div>
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var hbappUserAdd = layui.add
+    hbappUserAdd.init();
+});
+</script>
